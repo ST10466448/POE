@@ -31,7 +31,7 @@ public class login {
 
     public String returnLoginStatus(String enteredUsername, String enteredPassword){
         if(loginUser(enteredUsername, enteredUsername)) {
-            return "Welcome" + firstName + " " + lastName + ",its great to see you again.";
+            return "Welcome" + firstName + " " + lastName + ",great to see you.";
         }
         else{
             return "Username or password incorrect, please try again.";

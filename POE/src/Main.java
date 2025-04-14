@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        login Login= new login();
 
         String FirstName;
         String LastName;
@@ -18,10 +18,13 @@ public class Main {
         System.out.println("Enter a LastName:");
         LastName = scanner.nextLine();
 
-        do {
+        do
+        {
             System.out.println("Enter a Username:");
             Username = scanner.nextLine();
-            if (!Username.contains("_") || Username.length() > 5) {
+            if
+            (!Username.contains("_") || Username.length() > 5)
+            {
                 JOptionPane.showMessageDialog(null, "Username is not correctly formatted, please ensure that your username contains an underscore and is no longer than five characters in length.");
             }
 
@@ -36,6 +39,7 @@ public class Main {
             if (!isValidPassword(Password)) ;
             {
                 JOptionPane.showMessageDialog(null, "Password is not correctly formatted, please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.");
+
 
             }
         }
@@ -69,6 +73,8 @@ public class Main {
                 password.matches(".*[A-Z].*")&&
                 password.matches(".*[0-9].*") &&
                 password.matches(".*[!@#$%^&*()+-=].*");
+
+
     }
 }
 
